@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+/*int main()
+{
+	vector<int>a;
+	int n,x;
+	cin>>n;
+	for(int i=0;i<n;i++)
+	{
+		cin>>x;
+		a.push_back(x);
+	}
+	vector<int>::iterator ptr;
+	sort(a.begin(),a.end());
+	for(auto i:a)
+	{
+		cout<<i<<" ";
+	}
+	// 2d vector
+	vector<vector<int>>grid1;
+	vector<vector<int>>grid(5,vector<int>(5,-1));
+	for(int i=0;i<5;i++)
+	{
+		for(int j=0;j<5;j++)
+		{
+			cout<<grid[i][j]<<" ";
+		}
+	}
+}
+*/
+bool comp(const pair<int,int>&a , const pair<int,int>&b)
+{
+	return a.second<b.second;
+}
+int main()
+{
+	pair<int,int>p(10,20);
+	vector<pair<int,int>>vp;
+	vp.push_back({6,9});
+	vp.push_back({8,12});
+	vp.push_back({11,13});
+	vp.push_back({12,14});
+	//sort(vp.begin(),vp.end());
+	sort(vp.begin(), vp.end(),comp);
+	for(auto i:vp)
+	{
+		cout<<i.first<<" "<<i.second<<endl;
+	}
+
+}
